@@ -1,0 +1,38 @@
+# Private config options for Drogue IoT application
+
+# Copyright (c) 2022 Red Hat
+# SPDX-License-Identifier: Apache-2.0
+
+mainmenu "Drogue IoT HTTP/TLS sample application"
+
+config DROGUE_HOSTNAME
+	string "Hostname of Drogue IoT server"
+	default "mqtt.sandbox.drogue.cloud"
+	help
+	  Set hostname string that matches the Drogue IoT server
+
+config DROGUE_PORT
+	string "Port of Drogue IoT server"
+	default "443"
+	help
+	  Set port number string that matches the Drogue IoT server
+
+config DROGUE_APPLICATION
+    string "Drogue IoT application name"
+	default "example-app"
+	help
+	  Set required application string that matches the Drogue IoT application
+
+config DROGUE_DEVICE
+    string "Drogue IoT device name"
+	default "device1"
+	help
+	  Set required device string that matches the Drogue IoT device
+
+config DROGUE_DEVICE_PASSWORD
+    string "Drogue IoT device password"
+	default "hey-rodney"
+	help
+	  Set required password string that matches the Drogue IoT device password
+
+source "Kconfig.zephyr"
